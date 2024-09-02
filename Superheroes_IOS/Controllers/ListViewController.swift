@@ -7,8 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
 
+
+    @IBOutlet weak var heroesSearchBar: UISearchBar!
+    @IBOutlet weak var heroesTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
