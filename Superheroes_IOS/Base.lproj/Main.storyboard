@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9tm-vf-tmT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Superheroes_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nT8-7T-f9a">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search for Superhero" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-hA-re1">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="RmM-A6-oHg"/>
+                                        </connections>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3zz-cJ-AZN">
+                                        <rect key="frame" x="0.0" y="56" width="393" height="659"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="w18-do-zWv">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="220"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w18-do-zWv" id="cwm-Sa-AMI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-bS-emD">
+                                                            <rect key="frame" x="121" y="10" width="150" height="200"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkw-U3-8nI">
+                                                            <rect key="frame" x="121" y="165" width="150" height="45"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                            <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="20"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3zz-cJ-AZN" firstAttribute="leading" secondItem="nT8-7T-f9a" secondAttribute="leading" id="CzB-LW-waJ"/>
+                                    <constraint firstItem="3zz-cJ-AZN" firstAttribute="top" secondItem="dlD-hA-re1" secondAttribute="bottom" id="Vbt-PP-Lcs"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlD-hA-re1" secondAttribute="trailing" id="W25-WQ-1A9"/>
+                                    <constraint firstAttribute="trailing" secondItem="3zz-cJ-AZN" secondAttribute="trailing" id="XCO-GW-NEo"/>
+                                    <constraint firstItem="3zz-cJ-AZN" firstAttribute="leading" secondItem="nT8-7T-f9a" secondAttribute="leading" id="Y6h-ab-NQy"/>
+                                    <constraint firstItem="dlD-hA-re1" firstAttribute="top" secondItem="nT8-7T-f9a" secondAttribute="top" id="aLC-Po-YDU"/>
+                                    <constraint firstAttribute="bottom" secondItem="3zz-cJ-AZN" secondAttribute="bottom" id="bua-MV-h2v"/>
+                                    <constraint firstAttribute="trailing" secondItem="3zz-cJ-AZN" secondAttribute="trailing" id="c6U-Rt-XXk"/>
+                                    <constraint firstItem="dlD-hA-re1" firstAttribute="top" secondItem="nT8-7T-f9a" secondAttribute="top" id="f4G-li-wWe"/>
+                                    <constraint firstAttribute="bottom" secondItem="3zz-cJ-AZN" secondAttribute="bottom" id="gJH-PR-3Ve"/>
+                                    <constraint firstItem="dlD-hA-re1" firstAttribute="leading" secondItem="nT8-7T-f9a" secondAttribute="leading" id="hfj-s6-LC8"/>
+                                    <constraint firstItem="dlD-hA-re1" firstAttribute="leading" secondItem="nT8-7T-f9a" secondAttribute="leading" id="jUj-sB-HOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlD-hA-re1" secondAttribute="trailing" id="m90-KK-TK3"/>
+                                    <constraint firstItem="3zz-cJ-AZN" firstAttribute="top" secondItem="dlD-hA-re1" secondAttribute="bottom" id="nef-RU-e47"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nT8-7T-f9a" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8hg-GP-ZFB"/>
+                            <constraint firstItem="nT8-7T-f9a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E5B-sd-dfU"/>
+                            <constraint firstItem="nT8-7T-f9a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IpZ-PQ-2lh"/>
+                            <constraint firstItem="nT8-7T-f9a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OwB-8F-73d"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xWe-07-ebd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rar-96-KOx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tm-vf-tmT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBx-Nj-rTE" userLabel="Superheroes">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9fA-LO-UzD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghn-wb-3ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
