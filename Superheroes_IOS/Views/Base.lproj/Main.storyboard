@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="56" width="393" height="659"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="220" id="w18-do-zWv">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="220" id="w18-do-zWv" customClass="HeroViewCell" customModule="Superheroes_IOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="393" height="220"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w18-do-zWv" id="cwm-Sa-AMI">
@@ -70,6 +70,10 @@
                                                         <constraint firstItem="0qm-bS-emD" firstAttribute="leading" secondItem="cwm-Sa-AMI" secondAttribute="leading" constant="20" id="mrv-Is-j2J"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="heroImageView" destination="0qm-bS-emD" id="hdN-ss-Hlg"/>
+                                                    <outlet property="heroNameLabel" destination="Wkw-U3-8nI" id="jBX-Ug-E6m"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

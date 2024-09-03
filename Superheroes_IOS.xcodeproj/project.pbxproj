@@ -13,6 +13,10 @@
 		6C7AEF772C85AB2D0048FC66 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C7AEF762C85AB2D0048FC66 /* Base */; };
 		6C7AEF792C85AB2D0048FC66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7AEF782C85AB2D0048FC66 /* Assets.xcassets */; };
 		6C7AEF7C2C85AB2D0048FC66 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C7AEF7B2C85AB2D0048FC66 /* Base */; };
+		6CB4C9952C86FE4500012323 /* Superheroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4C9942C86FE4500012323 /* Superheroes.swift */; };
+		6CB4C9972C86FEC400012323 /* HeroAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4C9962C86FEC400012323 /* HeroAPIProvider.swift */; };
+		6CB4C9992C87263F00012323 /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4C9982C87263F00012323 /* HeroViewCell.swift */; };
+		6CB4C99D2C872C7600012323 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4C99C2C872C7600012323 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6C7AEF782C85AB2D0048FC66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C7AEF7B2C85AB2D0048FC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7AEF7D2C85AB2D0048FC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB4C9942C86FE4500012323 /* Superheroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superheroes.swift; sourceTree = "<group>"; };
+		6CB4C9962C86FEC400012323 /* HeroAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAPIProvider.swift; sourceTree = "<group>"; };
+		6CB4C9982C87263F00012323 /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
+		6CB4C99C2C872C7600012323 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6C7AEF732C85AB2D0048FC66 /* ListViewController.swift */,
+				6CB4C9982C87263F00012323 /* HeroViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +98,7 @@
 		6C7AEF852C85DD840048FC66 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6CB4C9942C86FE4500012323 /* Superheroes.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -96,6 +106,7 @@
 		6C7AEF862C85DD8E0048FC66 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				6CB4C9962C86FEC400012323 /* HeroAPIProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 		6C7AEF872C85DD990048FC66 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6CB4C99C2C872C7600012323 /* UIImageViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -178,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB4C9952C86FE4500012323 /* Superheroes.swift in Sources */,
+				6CB4C99D2C872C7600012323 /* UIImageViewExtension.swift in Sources */,
+				6CB4C9972C86FEC400012323 /* HeroAPIProvider.swift in Sources */,
 				6C7AEF742C85AB2D0048FC66 /* ListViewController.swift in Sources */,
 				6C7AEF702C85AB2D0048FC66 /* AppDelegate.swift in Sources */,
+				6CB4C9992C87263F00012323 /* HeroViewCell.swift in Sources */,
 				6C7AEF722C85AB2D0048FC66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
