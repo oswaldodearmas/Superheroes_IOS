@@ -30,7 +30,6 @@ class ListViewController: UIViewController,
         heroesSearchBar.delegate = self
                
                HeroAPIProvider.searchByName(heroName: "superman", completionHandler: { [weak self] results in
-                   //self?.superheroInitialList = results
                    self?.superheroList = results
                    DispatchQueue.main.async {
                        self?.heroesTableView.reloadData()
@@ -86,6 +85,20 @@ class ListViewController: UIViewController,
             if (searchText.isEmpty) {
                 self.superheroList = self.superheroInitialList
                 self.heroesTableView.reloadData()
+            }
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Preguntamos cual es el identificador del segue
+            if segue.identifier == "navToDetail" {
+                // Obtenemos el viewController de destino
+                let viewController = segue.destination as! DetailViewController
+                // Obtenemos la celda seleccionada
+                let indexPath = heroesTableView.indexPathForSelectedRow!
+                // Asignamos en detalle el heroe que corresponde a la celda seleccionada
+                viewController.hero = superheroList[indexPath.row]
+                // Deseleccionamos la celda para que no aparezca marcada
+                heroesTableView.deselectRow(at: indexPath, animated: false)
             }
         }
     

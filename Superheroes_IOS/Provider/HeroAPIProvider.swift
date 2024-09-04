@@ -21,10 +21,6 @@ class HeroAPIProvider {
                     return
                 }
                 
-                /*if let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) {
-                    print("Error with the response, unexpected status code: \(httpResponse.statusCode)")
-                    return
-                }*/
                 
                 guard let data = data else {
                     print("Error with the data")
@@ -45,8 +41,10 @@ class HeroAPIProvider {
             task.resume()
         }
         
-        static func findById() {
+    static func findHeroById(heroId:String) {
             
+        
+        
         }
     
     // MARK: Utils
